@@ -46,7 +46,7 @@ module vlan {
           path "/ncs:devices/ncs:device/ncs:name";
         }
      }
-   }
+   
   list interface {
     tailf:info "Ethernet interface";
     key "intf-type intf-id";
@@ -63,6 +63,7 @@ module vlan {
       tailf:info "Ethernet interface ID";
       type string;
     }
+   }
    }
   }
  }
