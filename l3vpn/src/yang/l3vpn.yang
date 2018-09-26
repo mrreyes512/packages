@@ -67,7 +67,7 @@ module l3vpn {
         type string;
       }
 
-      leaf Routing-protocol {
+      leaf routing-protocol {
         tailf:info "Routing option on PE-CE link";
         type enumeration {
           enum bgp;
