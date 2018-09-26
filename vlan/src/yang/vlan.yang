@@ -40,16 +40,16 @@ module vlan {
      tailf:info "L3 switch";
      key name;
 
-     leaf name {
-     	tailf:info "Device name";
-        type leafref {
-          path "/ncs:devices/ncs:device/ncs:name";
-        }
-     }
+    leaf name {
+    tailf:info "Device name";
+      type leafref {
+        path "/ncs:devices/ncs:device/ncs:name";
+      }
+    }
    
-  list interface {
-    tailf:info "Ethernet interface";
-    key "intf-type intf-id";
+    list interface {
+      tailf:info "Ethernet interface";
+      key "intf-type intf-id";
 
     leaf intf-type {
       tailf:info "Ethernet interface type";
@@ -59,6 +59,7 @@ module vlan {
         enum GigabitEthernet;
       }
     }
+    
     leaf intf-id {
       tailf:info "Ethernet interface ID";
       type string;
