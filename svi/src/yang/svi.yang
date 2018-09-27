@@ -58,8 +58,26 @@ module svi {
         tailf:info "Unique IPv4 prefix for VLAN";
         type inet:ip-prefix;
       }
-    }
 
+      list interface {
+        tailf:info "Ethernet interface";
+        key "intf-type intf-id";
+
+        leaf intf-type {
+          tailf:info "Ethernet interface type";
+          type enumeration {
+            enum Ethernet;
+            enum FastEthernet;
+            enum GigabitEthernet;
+          }
+        }
+
+        leaf intf-id {
+          tailf:info "Ethernet interface ID";
+          type string;
+        }
+      }
+    }
   }
  }
 }
