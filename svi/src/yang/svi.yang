@@ -53,6 +53,11 @@ module svi {
           path "/ncs:devices/ncs:device/ncs:name";
         }
       }
+
+      leaf ip-prefix {
+        tailf:info "Unique IPv4 prefix for VLAN";
+        type inet:ip-prefix;
+      }
     }
 
   }
