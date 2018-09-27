@@ -35,6 +35,14 @@ module svi {
     uses ncs:service-data;
     ncs:servicepoint svi-servicepoint;
 
+    leaf vlan-id {
+      tailf:info "Unique VLAN ID";
+      mandatory true;
+      type uint32 {
+        range "1..4096";
+      }
+    }
+
   }
  }
 }
