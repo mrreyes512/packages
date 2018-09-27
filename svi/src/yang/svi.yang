@@ -43,6 +43,18 @@ module svi {
       }
     }
 
+    list device {
+      tailf:info "L3 switch";
+      key name;
+
+      leaf name {
+        tailf:info "Device name";
+        type leafref {
+          path "/ncs:devices/ncs:device/ncs:name";
+        }
+      }
+    }
+
   }
  }
 }
