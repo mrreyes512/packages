@@ -21,6 +21,7 @@ module svi {
       "Initial revision.";
   }
 
+ augment /ncs:services {
   list svi {
     description "This is an RFS skeleton service";
 
@@ -34,16 +35,6 @@ module svi {
     uses ncs:service-data;
     ncs:servicepoint svi-servicepoint;
 
-    // may replace this with other ways of refering to the devices.
-    leaf-list device {
-      type leafref {
-        path "/ncs:devices/ncs:device/ncs:name";
-      }
-    }
-
-    // replace with your own stuff here
-    leaf dummy {
-      type inet:ipv4-address;
-    }
   }
+ }
 }
